@@ -14,6 +14,16 @@ const recipeScheam = new mongoose.Schema({
     category: {
         type: mongooseTypes.ObjectId,
         ref: 'category'
+    },
+    upvotes: {
+        type: mongooseTypes.Number,
+        required: true,
+        default: 0
+    },
+    downvotes: {
+        type: mongooseTypes.Number,
+        required: true,
+        default: 0
     }
 })
 
