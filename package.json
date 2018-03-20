@@ -1,0 +1,21 @@
+{
+  "name": "graphql",
+  "version": "1.0.0",
+  "description": "Node with GraphQL Example ",
+  "main": "server.js",
+  "scripts": {
+    "serve": "nodemon ./src/server.js --exec babel-node",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ahmed Magdy",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mongoose": "^5.0.11"
+  },
+  "devDependencies": {
+    "@babel/node": "^7.0.0-beta.42",
+    "@babel/preset-es2015": "^7.0.0-beta.42",
+    "nodemon": "^1.17.2"
+  }
+}
