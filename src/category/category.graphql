@@ -1,0 +1,16 @@
+type Category {
+    title: String!
+    createdAt: Date!
+}
+
+
+input newCategory {
+    title: String!
+    createdAt: Date!
+}
+
+input updateSong {
+    id: ID!
+    title: String
+}
+
