@@ -1,0 +1,25 @@
+type Chef{
+    id: ID!
+    name: String!
+    position: String
+    phoneNumber: String
+    email: String !
+    recipes : [Recipe]
+}
+
+input newChef{
+    name: String!
+    position: String
+    phoneNumber: String
+    email: String !
+}
+
+extend type Query{
+    chefs: [Chef]!
+    singleChef(id: ID!): Chef!
+}
+
+extend type Mutation {
+    newChef(chef: newChef!): Chef!
+    deleteChef(id: ID!): Chef!
+}
