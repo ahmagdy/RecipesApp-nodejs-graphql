@@ -1,4 +1,5 @@
 type Category {
+    id: ID!
     title: String!
     createdAt: Date!
 }
@@ -6,11 +7,20 @@ type Category {
 
 input newCategory {
     title: String!
-    createdAt: Date!
 }
 
-input updateSong {
+input updateCategory {
     id: ID!
     title: String
 }
 
+extend type Query{
+    categories: [Category]!
+    singleCategory(id: ID!): Category!
+}
+
+extend type Mutation {
+    newCategory(category: newCategory!): Category!
+    updateCategory(category: updateCategory!): Category!
+    deleteChef(id: ID!): Category!
+}
