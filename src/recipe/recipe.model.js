@@ -3,7 +3,7 @@ import mongoose from 'mongoose'
 const mongooseTypes = mongoose.Schema.Types
 
 const recipeScheam = new mongoose.Schema({
-    titel: {
+    title: {
         type: String,
         required: true
     },
@@ -13,11 +13,13 @@ const recipeScheam = new mongoose.Schema({
     },
     category: {
         type: mongooseTypes.ObjectId,
-        ref: 'category'
+        ref: 'category',
+        required: true
     },
     chef: {
         type: mongooseTypes.ObjectId,
-        ref: 'chef'
+        ref: 'chef',
+        required: true
     },
     upvotes: {
         type: mongooseTypes.Number,
