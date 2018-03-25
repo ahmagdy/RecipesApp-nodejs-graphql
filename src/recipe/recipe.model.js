@@ -15,6 +15,10 @@ const recipeScheam = new mongoose.Schema({
         type: mongooseTypes.ObjectId,
         ref: 'category'
     },
+    chef: {
+        type: mongooseTypes.ObjectId,
+        ref: 'chef'
+    },
     upvotes: {
         type: mongooseTypes.Number,
         required: true,

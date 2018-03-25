@@ -5,12 +5,14 @@
   "main": "server.js",
   "scripts": {
     "serve": "nodemon ./src/server.js --exec babel-node",
+    "build": "babel src -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ahmed Magdy",
   "license": "MIT",
   "dependencies": {
     "express": "^4.16.3",
+    "lodash.merge": "^4.6.1",
     "mongoose": "^5.0.11"
   },
   "devDependencies": {

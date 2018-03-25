@@ -1,3 +1,4 @@
+// @ts-check
 import mongoose from 'mongoose'
 
 const mongooseTypes = mongoose.Schema.Types
