@@ -3,7 +3,7 @@ import mongoose from 'mongoose'
 const mongooseTypes = mongoose.Schema.Types
 
 const categoryScheam = new mongoose.Schema({
-    titel: {
+    title: {
         type: String,
         required: true
     },

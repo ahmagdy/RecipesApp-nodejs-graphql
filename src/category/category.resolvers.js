@@ -1,4 +1,5 @@
-import { Category } from 'category.model'
+import { Category } from './category.model'
+
 
 const getAllCategories = () => Category.find({}).exec()
 
@@ -6,7 +7,7 @@ const getOneById = id => Category.findById(id).exec()
 
 
 
-const insertOne = category => category.create()
+const insertOne = (_, { category }) => Category.create(category)
 
 const updateOne = (id, update) => Category.findByIdAndUpdate(id, update, { new: true }).exec()
 
@@ -20,6 +21,6 @@ export const categoryResolvers = {
     Mutation: {
         newCategory: insertOne,
         updateCategory: updateOne,
-        deleteChef: deleteOne
+        deleteCategory: deleteOne
     }
 }

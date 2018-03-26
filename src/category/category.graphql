@@ -1,3 +1,5 @@
+scalar Date
+
 type Category {
     id: ID!
     title: String!
@@ -5,7 +7,7 @@ type Category {
 }
 
 
-input newCategory {
+input newCategoryInput {
     title: String!
 }
 
@@ -14,13 +16,13 @@ input updateCategory {
     title: String
 }
 
-extend type Query{
+extend type Query {
     categories: [Category]!
     singleCategory(id: ID!): Category!
 }
 
 extend type Mutation {
-    newCategory(category: newCategory!): Category!
+    newCategory(category: newCategoryInput!): Category!
     updateCategory(category: updateCategory!): Category!
-    deleteChef(id: ID!): Category!
+    deleteCategory(id:ID!): Category
 }
