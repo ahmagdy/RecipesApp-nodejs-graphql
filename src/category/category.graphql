@@ -11,7 +11,7 @@ input newCategoryInput {
     title: String!
 }
 
-input updateCategory {
+input updateCategoryInput {
     id: ID!
     title: String
 }
@@ -23,6 +23,6 @@ extend type Query {
 
 extend type Mutation {
     newCategory(category: newCategoryInput!): Category!
-    updateCategory(category: updateCategory!): Category!
+    updateCategory(category: updateCategoryInput!): Category!
     deleteCategory(id:ID!): Category
 }

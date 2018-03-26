@@ -9,7 +9,7 @@ type Recipe{
 }
 
 
-input newRecipe{
+input newRecipeInput{
     title:String!
     description: String!
     category: ID!
@@ -25,6 +25,6 @@ type Query{
 }
 
 type Mutation{
-    newRecipe(recipe: newRecipe!): Recipe!
+    newRecipe(recipe: newRecipeInput!): Recipe!
     deleteRecipe(id:ID!): Recipe
 }

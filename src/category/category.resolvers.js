@@ -9,7 +9,7 @@ const getOneById = id => Category.findById(id).exec()
 
 const insertOne = (_, { category }) => Category.create(category)
 
-const updateOne = (id, update) => Category.findByIdAndUpdate(id, update, { new: true }).exec()
+const updateOne = (_, { category }) => Category.findByIdAndUpdate(category.id, category, { new: true }).exec()
 
 const deleteOne = id => Category.findByIdAndRemove(id).exec()
 

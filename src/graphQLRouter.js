@@ -11,17 +11,15 @@ import { Kind } from 'graphql/language';
 import merge from 'lodash.merge'
 
 
+
 const schemaDefinition = `
   schema {
     query: Query
     mutation: Mutation
   }
 `;
-console.info(merge({},
-    dateResolver,
-    recipeResolvers,
-    categoryResolvers,
-    chefResolvers));
+
+
 const dateResolver = {
     Date: new GraphQLScalarType({
         name: 'Date',
@@ -30,7 +28,7 @@ const dateResolver = {
             return new Date(value); // value from the client
         },
         serialize(value) {
-            return value.getTime(); // value sent to the client
+            return new Date(value);// value sent to the client
         },
         parseLiteral(ast) {
             if (ast.kind === Kind.INT) {
@@ -40,7 +38,7 @@ const dateResolver = {
         },
     }),
 };
-console.log(categoryType);
+
 export const schema = makeExecutableSchema({
     typeDefs: [
         schemaDefinition,

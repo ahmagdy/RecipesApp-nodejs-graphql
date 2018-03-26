@@ -1,5 +1,5 @@
 const config = {
-    portNumber:1654,
+    portNumber:3000,
     dbCNS:'mongodb://localhost:27017/node-graphql'
 };
 

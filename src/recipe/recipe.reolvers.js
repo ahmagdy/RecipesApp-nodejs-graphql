@@ -5,8 +5,10 @@ const getAllRecipes = () => Recipe.find({}).exec()
 const getSingleRecipe = (_, { id }) => Recipe.findById(id).exec()
 
 
-const createNewRecipe = (_, { newSong }) => Recipe.create(newSong)
+const createNewRecipe = (_, { recipe }) => Recipe.create(recipe)
+
 const deleteSingleRecipe = (_, { id }) => Recipe.findByIdAndRemove(id).exec()
+
 
 
 export const recipeResolvers = {
