@@ -55,6 +55,5 @@ export const schema = makeExecutableSchema({
 
 
 export const graphQLRouter = graphqlExpress((req) => ({
-    schema: schema,
-    context: { req }
+    schema: schema
 }))
